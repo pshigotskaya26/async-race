@@ -1,0 +1,29 @@
+.header__container {
+	display: flex;
+	column-gap: 10rem;
+	align-items: center;
+	padding: 3rem;
+	background-color: $color-black;
+}
+
+.navigation {
+	display: flex;
+	column-gap: 2rem;
+}
+
+.navigation-link {
+	display: block;
+	padding: 1rem 2rem;
+	color: $color-white;
+	background-color: $color-primery;
+	border-radius: 0.5rem;
+
+	&:hover {
+		background-color: $color-primery-light;
+		transition: all 0.5s ease-out;
+	}
+
+	&_activ {
+		background-color: $color-primery-light;
+	}
+}
