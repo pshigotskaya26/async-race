@@ -1,0 +1,33 @@
+.winner-item {
+	display: flex;
+	align-items: center;
+}
+
+.winner-item__number,
+.winner-item__car,
+.winner-item__name,
+.winner-item__wins,
+.winner-item__time {
+	padding-left: 2rem;
+	color: $color-white;
+}
+
+.winner-item__number {
+	flex: 0 1 5rem;
+}
+
+.winner-item__car {
+	flex: 0 1 15rem;
+}
+
+.winner-item__name {
+	flex: 0 1 16rem;
+}
+
+.winner-item__wins {
+	flex: 0 1 13rem;
+}
+
+.winner-item__time {
+	flex: 0 1 20rem;
+}
