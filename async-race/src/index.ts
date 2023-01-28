@@ -1,31 +1,39 @@
-import "./index.scss";
+import { IWinnerItemAnimate } from './types/IWinnerItemAnimate';
+import { IObjOfAnimateArray } from './types/IObjFromAnimate';
+import "./index.scss"
+import App from "./pages/app/index";
+import { clearLocalStorage } from "./utils/clearLocalStorage";
 
-class BaseControls {
+clearLocalStorage();
 
-	render() {
-		const baseControlsContainerNode = document.createElement("div");
-		baseControlsContainerNode.classList.add('base-controls__container');
-		baseControlsContainerNode.innerHTML = `
-		<div class="base-controls__create-car">
-			<input class="input input-text_create" type="text" id="input-create_name" name="input-create_name">
-			<input class="input-color input-color_create" type="color" id="input-create_color" name="nput-create_color" value="#4fc4ff">
-			<button class="button button-create">Create</button>
-		</div>
+let arrayOfWinnersAnimation: IWinnerItemAnimate[] = [];
 
-		<div class="base-controls__update-car disable">
-			<input class="input input-text_update" type="text" id="input-update_name" name="input-update_name">
-			<input class="input-color input-color_update" type="color" id="input-update_color" name="input-update_color" value="#4fc4ff">
-			<button class="button button-update">Update</button>
-		</div>
+localStorage.setItem('arrayOfWinnersAnimation',JSON.stringify(arrayOfWinnersAnimation));
 
-		<div class="base-controls__general-settings">
-			<button class="button button-race">Race</button>
-			<button class="button button-reset disable">Reset</button>
-			<button class="button button-generate">Generate cars</button>
-		</div>
-		`;
-		return baseControlsContainerNode;
-	}
+export const baseUrlServer = 'http://127.0.0.1:3000';
+
+export const path = {
+	garage: '/garage',
+	winners: '/winners',
+	engine: '/engine',
 }
 
-export default BaseControls;
+export const arrBaseParam = [{ key: '_page', value: 1 }, { key: '_limit', value: 7 }];
+export const arrBaseParamWinners = [{ key: '_page', value: 1 }, { key: '_limit', value: 10 }];
+
+export const arrOfCarBrands = [
+	"Audi", "BMW", "Ford", "Honda", "Hyundai",
+	"Kia", "Lada", "Mazda", "Mercedes-Benz",
+	"Mitsubishi", "Nissan", "Renault", "Skoda",
+	"Toyota", "Volkswagen"
+];
+
+export const arrOfCarModels = [
+	"Sedan", "Universal", "Liftback", "Hatchback", "Crossover"
+];
+
+export const arrOfColorLetters = ("0123456789ABCDEF").split('');
+export let arrOfAnimation: IObjOfAnimateArray[] = [];
+
+const app = new App();
+app.run();
