@@ -1,0 +1,19 @@
+.page-buttons__container {
+	padding: 0 3rem 3rem;
+}
+
+.page-buttons__container .button {
+	padding: 2rem 4rem;
+	background-color: $color-primery;
+
+	&:hover {
+		background-color: $color-primery-light;
+		transition: all 0.3s ease-out;
+	}
+}
+
+.page-buttons__container .button.disable {
+	background-color: $color-gray;
+	pointer-events: none;
+}
+
