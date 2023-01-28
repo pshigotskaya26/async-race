@@ -1,0 +1,43 @@
+.base-controls__container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 3rem;
+	padding: 0 3rem 3rem;
+}
+.base-controls__create-car,
+.base-controls__update-car {
+	display: flex;
+	column-gap: 2rem;
+}
+
+.base-controls__update-car.disable,
+.base-controls__create-car.disable {
+	pointer-events: none;
+	opacity: 0.2;
+}
+
+.base-controls__general-settings {
+	display: flex;
+	column-gap: 2rem;
+	padding-bottom: 3rem;
+	border-bottom: 0.1rem solid $color-text;
+}
+
+.button-create,
+.button-update,
+.button-race,
+.button-reset,
+.button-generate {
+	background-color: $color-text;
+
+	&:hover {
+		background-color: $color-gray;
+		transition: all 0.3s ease-out;
+	}
+}
+
+.button-race.disable,
+.button-reset.disable {
+	pointer-events: none;
+	opacity: 0.2;
+}
