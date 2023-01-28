@@ -1,0 +1,13 @@
+.name-block-winners__container {
+	display: flex;
+	column-gap: 1rem;
+	padding: 0 3rem 3rem;
+	color: $color-white;
+	font-weight: bold;
+}
+
+.name-block-winners__count-value {
+	padding: 0 0.3rem;
+	font-size: 1.6rem;
+	color: $color-white;
+}
