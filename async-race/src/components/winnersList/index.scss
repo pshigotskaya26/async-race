@@ -1,0 +1,45 @@
+.winners-list__container {
+	padding: 0 3rem 3rem;
+}
+
+.winners-list__titles {
+	display: flex;
+}
+
+.winners-list__content {
+	padding-top: 1rem;
+}
+
+.winners-titles__number,
+.winners-titles__car,
+.winners-titles__name,
+.winners-titles__wins,
+.winners-titles__time {
+	display: flex;
+	padding-left: 2rem;
+	color: $color-white;
+	font-weight: bold;
+	border-right: 0.1rem solid $color-primery-light;
+	border-bottom: 0.1rem solid $color-primery-light;
+}
+
+.winners-titles__number {
+	flex: 0 1 5rem;
+}
+
+.winners-titles__car {
+	flex: 0 1 15rem;
+}
+
+.winners-titles__name {
+	flex: 0 1 16rem;
+}
+
+.winners-titles__wins {
+	flex: 0 1 13rem;
+}
+
+.winners-titles__time {
+	flex: 0 1 20rem;
+	border-right: none;
+}
